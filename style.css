@@ -26,6 +26,9 @@ ul li{
     padding-top: 12px;
     padding-bottom: 12px;
 }
+.ham{
+    display: none;
+}
 .logo li{
     margin-left: 12px;
     font-size: 44px;
@@ -57,6 +60,7 @@ ul li{
     height: 488.66px;
     width:100%;
     display :flex;
+    justify-content: space-between;
 }
 .element{
     width: 50%;
@@ -68,8 +72,8 @@ h4,p{
     position:relative;
     top:101px;
     display: block;
-    margin-left: 211px;
-    font-size: 47px;
+    margin-left: 89px;
+    font-size: 3vw;
     color: white;
     font-family: 'Rubik', sans-serif;
 }
@@ -78,7 +82,7 @@ h4,p{
     top:111px;
     display: block;
     background-color: #772ba8;
-    margin-left: 211px;
+    margin-left: 89px;
     width: 264px;
     border-radius: 5px;
 }
@@ -86,7 +90,7 @@ h4,p{
     position:relative;
     top:125px;
     display: block;
-    margin-left: 211px;
+    margin-left: 89px;
     width: 254px;
 
 }
@@ -96,11 +100,11 @@ h4,p{
 .img{
        width: 50%;
        display: flex;
-       align-items: end;    
+       align-items: center;    
        justify-content: center;
 }
 .img img{
-    height:488.66px ;
+    width:80% ;
 }
 .links{
     position: relative;
@@ -132,6 +136,18 @@ i{
 .sk1  span,.sk2 span{
     color: white;
     font-size:30px;
+}
+.sk1 img{
+    height:51px; 
+    width:52px ; 
+    margin-left: 18px;
+    margin-right: 18px;
+}
+.sk2 img{
+    height:51px;
+     width:52px; 
+     margin-left:18px;
+    margin-right: 18px;
 }
 .sk2{
     position: relative;
@@ -177,7 +193,8 @@ i{
 .abtout img{
  position:relative;
  top: 22px;
- height: 478px;   
+ width: 37%;  
+
  
 }
 .contact{
@@ -203,3 +220,177 @@ i{
     align-items: center;
     justify-content: center;
 }
+/*media query code start here */
+@media only  screen and (max-width:768px) {
+    *{
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+    }
+    .main{
+        overflow-x:hidden;
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+    }
+    .head{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px;
+    }
+    .logo li{
+        margin-left: 0px;
+        margin-right: 12px;
+        font-size: 35px;
+    
+    }
+    .pages{
+        display: none;
+        margin: 0px;
+    
+    }
+    .pages li{
+        font-size: 20px;
+        margin: 0px;
+    }
+    .ham{
+        display: block;
+    }
+    .l1{
+        display: block;
+        position: relative;
+        height:2px;
+        width:16px;
+        margin-left: 4px;
+        background-color: white;
+    }
+    .l2{
+        display: block;
+        position: relative;
+        top:4px;
+        height: 2px;
+        width:16px;
+        margin-left: 4px;
+        background-color: white;
+    }
+    .l3{
+        display: block;
+        position: relative;
+        top:8px;
+        height: 2px;
+        width:16px;
+        margin-left: 4px;
+        background-color: white;
+    }
+    .content{
+        position: absolute;
+        top:74.67px;
+        height: 595px;
+        width:100%;
+        display :flex;
+        justify-content:center;
+        flex-direction: column-reverse;
+    }
+    .img{
+        position: relative;
+        top:-30px;
+        width: 100%;
+        display: flex;
+        align-items: center;    
+        justify-content: center;
+ }
+ .img img{
+     width:227px ;
+ }
+    .element{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .t1{
+        position:relative;
+        top:-12px;
+        display: block;
+        margin-left: 15px;
+        font-size: 25px;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+    }
+    .t2{
+        position:relative;
+        top:-2px;
+        display: block;
+        background-color: #772ba8;
+        margin-left: 37px;
+        width: 264px;
+        padding: 1px;
+        border-radius: 5px;
+    }
+    .t3{
+        position:relative;
+        top:11px;
+        display: block;
+        margin-left: 42px;
+        width: 254px;
+    
+    }
+    .t3 p{
+        font-size: 18px;
+    }
+    .sk1  span,.sk2 span{
+        position: relative;
+        left: -35px;
+        color: white;
+        font-size:25px;
+        
+    }
+    .sk1 i{
+        font-size: 35px;
+        
+    }
+    .sk2 i{
+        font-size:48px ;
+    }
+    .sk1 img {
+        height: 31px;
+        width: 34px;
+    }
+    .sk2 img {
+        height: 47px;
+        width: 42px;
+    }
+    .abtout{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        flex-direction: column;
+    }
+    .info{
+     height: auto;
+        width:100%;
+    }
+    .info p{
+        position: relative;
+        top:107px;
+        left:41px;
+        padding-right: 12px;
+    }
+    .abtout img{
+        position:relative;
+        top: 156px;
+        width: 212px;  
+    }
+    .cntopt i{
+        font-size: 61px;
+    }
+
+
+    
+
+        
+    
+}
+    
