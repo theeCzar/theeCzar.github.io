@@ -1,104 +1,229 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Rubik:wght@500&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/98c22cf600.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-      <main class="main">
-      <nav class="head">
-        <div class="ham">
-          <span class="l1"></span>
-          <span class="l2"></span>
-          <span class="l3"></span>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+        a{
+           text-decoration: none;
+           color:inherit;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin: 30px 0 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 400;
+            margin-top: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .project-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-tools {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .skill-tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 50px 0;
+        }
+        
+        .contact-link {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            display: inline-block;
+            transition: color 0.3s;
+        }
+        
+        .contact-link:hover {
+            color: #0066cc;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                padding: 30px 0;
+            }
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/Untitled design (2).png" alt="Profile Photo" class="profile-img">
+        <h1>Aayush Tiwari</h1>
+        <p class="subtitle">Computer Engineering Graduate</p>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Recent Computer Engineering graduate with hands-on experience in full-stack development, DevOps, and machine learning. Passionate about solving complex problems and creating efficient, elegant solutions.</p>
+        
+        <div class="skills-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Machine Learning</span>
+            <span class="skill-tag">Embedded Systems</span>
+            <span class="skill-tag">Sql</span>
         </div>
-        <ul class="logo">
-            <li>czar</li>
-        </ul>
-        <ul class="pages">
-            <li><a href="#">home</a></li>
-            <li><a href="#abt">about</a></li>
-            <li><a href="#skl">skill</a></li>
-            <li><a href="#cnt">contact</a></li>
-        </ul>
-      </nav>
-      <div class="content">
-        <div class="element">
-            <span class="t1">I am Aayush Tiwari</span>
-            <span class="t2"><h4>Full stack software and web developer</h4></span>
-            <span class="t3"><p>I am a sophomore in computer science, likes to  code  for web and desktop solve programming questions </p></spant>
-            <div class="links">
-              <a href="https://github.com/theeCzar"><i class="fa-brands fa-github fa-2xl" style="color: white;"></i></a>
-              <a href="https://www.instagram.com/thisis_czar/"><i class="fa-brands fa-instagram fa-2xl" style="color: #eb1faa;"></i></a>
-              <a href="https://www.linkedin.com/in/aayush-tiwari-4751a6253/"><i class="fa-brands fa-linkedin fa-2xl" style="color: #1162ee;"></i></a>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="container">
+           <a href="https://www.kaggle.com/code/czar001/dog-breed-classifier">
+                <div class="card">
+                 <h3 class="project-title">Dog Breed Classification</h3>
+                 <p class="project-tools">Python,keras,CNN</p>
+                 <p>Engineered a classifier model to classify different breeds of dogs using Keras and CNN.</p>
+                </div>
+            </a>
+            <a href="https://www.kaggle.com/code/czar001/car-price-pred">
+            <div class="card">
+                <h3 class="project-title">Used Car Price Prediction</h3>
+                <p class="project-tools">Python, scikitlearn,xgboost </p>
+                <p>Developed a Prediction model to predict the price of used cars based on various factors using Xgboost and scikit learn</p>
             </div>
+            </a>
+
+            <a href="https://www.kaggle.com/code/czar001/wine-quality-torch">
+            <div class="card">
+                <h3 class="project-title">Wine Quality prediction</h3>
+                <p class="project-tool">python, pytorch,neural network</p>
+                <p>Developed a state of art model using neural network to predict quality of wine based on various factors.</p>
             </div>
-
-        <div class="img">
-            <img src="/image.png" alt="">
+            <a>
         </div>
-      </div>
-      </main>
-      <div class="skill">
-        <h1 id="skl">SKILLS</h1>
-        <div class="sk1">
-          <span>WEB Development</span>
-          <br>
-          <i class="fa-brands fa-html5 fa-4x" style="color: #fb3628;"></i>
-          <i class="fa-brands fa-css3-alt fa-4x" style="color: #125bd9;"></i>
-          <i class="fa-brands fa-square-js fa-4x" style="color: #f8f00d;"></i>
-          <i class="fa-brands fa-react fa-4x" style="color: #0e94cd;"></i>
-          <img src="/next.js.svg" >
-        </div>
-        <div class="sk2">
-          <span>Programming Languages</span>
-          <br>
-          <img src="/c.svg" >
-          <img src="/c++.svg" >
-          <i class="fa-brands fa-python fa-4x" style="color: #ebe40f;"></i>
-        </div>
-      </div>
-      <div class="about">
-        <h1 id="abt">ABOUT</h1>
-        <div class="abtout">
-         <div class="info">
-         <h1 class="me"><pre>Hello!
-I'am Aayush Tiwari(Czar)            
-          </pre></h1>
-          <p> I currently in my sophomore year of engineering in Computer Science along with my degree I also having 
-              my hands on web development ,compitative coding and much more. I have great passion for coding and software.
-              I usually work in C++, python and javascript.
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <h3>Bachelor of Science in Computer Engineering</h3>
+        <p>Shri Ramswaroop Memorial University • 2022 - 2026</p>
+        <p>GPA: 8.34/10.0</p>
+        <p>Relevant coursework: Data Structures, Algorithm Design, Computer Architecture, Machine Learning, Database Systems, Computer Networks</p>
+    </section>
+    
 
-          </p>
-      
-
-         </div>
-         <img  src="/image.png">
-       </div>
-
-
-      </div>
-      <div class="contact">
-        <h1 id="cnt"> contact</h1>
-        <div class="cntopt">
-          <a href="mailto:aayushtiwari25cz2003@gmail.com"><i class="fa-solid fa-envelope fa-6x " style="color: #f9401f;"></i></a>
-          <a href="https://github.com/theeCzar"><i class="fa-brands fa-github fa-6x" style="color: white;"></i></a>
-          <a href="https://www.instagram.com/thisis_czar/"><i class="fa-brands fa-instagram fa-6x" style="color: #eb1faa;"></i></a>
-          <a href="https://www.linkedin.com/in/aayush-tiwari-4751a6253/"><i class="fa-brands fa-linkedin fa-6x" style="color: #1162ee;"></i></a>
-
-        </div>
-
-      </div>
-      
-      <script src="" async defer></script>
-    </body>
+    
+    <section class="contact">
+        <h2>Get In Touch</h2>
+        <a href="mailto:aayushtiwari0110@gmail.com" class="contact-link">Email</a>
+        <a href="www.linkedin.com/in/aayush-tiwari-4751a6253" class="contact-link">LinkedIn</a>
+        <a href="https://github.com/theeCzar" class="contact-link">GitHub</a>
+        <a href="https://docs.google.com/document/d/1I_GG1mjgh4JGGt1GpGP2g8tDjW-g62Lwl4OvWlfPyR0/edit?usp=sharing" class="contact-link">Resume</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Aayush Tiwari. All rights reserved.</p>
+    </footer>
+</body>
 </html>
